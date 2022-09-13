@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import * as C from './App.styles';
 import * as Wallpapers from './services/wallpapers';
 import { Wallpaper } from './types/Wallpaper';
+import { WallpaperItem } from './components/WallpaperItem';
 
 const App = () => {
   const [loading, setLoading] = useState(false);
@@ -33,7 +34,7 @@ const App = () => {
         {!loading && wallpapers.length > 0 &&
           <C.WallpaperList>
             {wallpapers.map((item, index) =>(
-              <div>{item.name}</div>
+              <WallpaperItem key={index} url={item.url} name={item.name} />
             ))}
           </C.WallpaperList>
         }
