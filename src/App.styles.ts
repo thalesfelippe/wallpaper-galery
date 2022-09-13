@@ -52,4 +52,15 @@ export const LoadingInfo = styled.div`
         background-position: center;
         height: 80px;
     }
+
+    .emoji {
+        font-size: 60px;
+        margin: 10px 0;
+    }
+`;
+
+export const WallpaperList = styled.div`
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
 `;

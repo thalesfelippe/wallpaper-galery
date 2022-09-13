@@ -29,6 +29,21 @@ const App = () => {
             <div>Loading...</div>
           </C.LoadingInfo>
         }
+
+        {!loading && wallpapers.length > 0 &&
+          <C.WallpaperList>
+            {wallpapers.map((item, index) =>(
+              <div>{item.name}</div>
+            ))}
+          </C.WallpaperList>
+        }
+
+        {!loading && wallpapers.length === 0 &&
+          <C.LoadingInfo>
+            <div className='emoji'>🕵️</div>
+            <div>No registered wallpaper</div>
+          </C.LoadingInfo>
+        }
       </C.Area>
     </C.Container>
   );
