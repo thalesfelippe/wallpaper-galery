@@ -65,3 +65,32 @@ export const WallpaperList = styled.div`
     gap: 10px;
     margin-top: 10px;
 `;
+
+export const UploadForm = styled.form`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #212529;
+    border-bottom: 3px solid #000;
+    padding: 15px;
+    border-radius: 10px;
+    margin: 15px 0;
+
+    input[type=submit] {
+        background-color: #3A3B9C;
+        border: 0;
+        border-bottom: 2px solid #000;
+        border-right: 3px solid #000;
+        font-weight: bold;
+        color: #FFF;
+        padding: 8px 16px;
+        border-radius: 6px;
+        margin: 0 0 0 100px;
+        cursor: pointer;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            background-color: #3D3195;
+        }
+    }
+`;
